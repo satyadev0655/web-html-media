@@ -3,10 +3,9 @@
     <meta charset="UTF-8" />
     <script src="script.js"></script>
     <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-
   </head>
   <body>
-    <video width="320" height="240" controls autoplay muted>
+    <video id="vd" width="320" height="240" controls autoplay muted>
       <source
         src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
         type="video/webm"
@@ -17,5 +16,21 @@
       />
       Your browser does not support HTML video.
     </video>
+
+    <button onclick="_play()">Play</button>
+    <button onclick="_stop()">Stop</button>
+
+    <script>
+
+      let vd = document.getElementById("vd");
+      function _play(){
+          vd.play();
+      }
+
+
+      function _stop(){
+         vd.pause(); 
+      }
+    </script>
   </body>
 </html>
